@@ -1,0 +1,661 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/default_padding">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/simple_text_"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_height"
+            app:cardBackgroundColor="@color/colorPrimary"
+            android:padding="@dimen/default_padding"
+            android:onClick="startSimpleText"
+            app:cardCornerRadius="@dimen/card_corner_radius">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_simple_text"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:fontFamily="monospace" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/custom_text_"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_height"
+            app:cardBackgroundColor="@color/colorPrimary"
+            android:padding="@dimen/default_padding"
+            android:onClick="startCustomText"
+            android:layout_marginTop="@dimen/default_padding"
+            app:cardCornerRadius="@dimen/card_corner_radius">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_custom_text"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:fontFamily="monospace" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/vertical_scrollable_"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_height"
+            app:cardBackgroundColor="@color/colorPrimary"
+            android:padding="@dimen/default_padding"
+            android:onClick="startVerticalScrollable"
+            android:layout_marginTop="@dimen/default_padding"
+            app:cardCornerRadius="@dimen/card_corner_radius">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_vertical_scrollable"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:fontFamily="monospace" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/horizontal_scrollable_"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_height"
+            app:cardBackgroundColor="@color/colorPrimary"
+            android:padding="@dimen/default_padding"
+            android:onClick="startHorizontalScrollable"
+            android:layout_marginTop="@dimen/default_padding"
+            app:cardCornerRadius="@dimen/card_corner_radius">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_horizontal_scrollable"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:fontFamily="monospace" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/load_image_"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_height"
+            app:cardBackgroundColor="@color/colorPrimary"
+            android:padding="@dimen/default_padding"
+            android:onClick="starLoadImage"
+            android:layout_marginTop="@dimen/default_padding"
+            app:cardCornerRadius="@dimen/card_corner_radius">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_load_image"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:fontFamily="monospace" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- The Table API was removed in dev11 so disabling this  until an alternative is
+         added back -->
+        <!--        <androidx.cardview.widget.CardView-->
+        <!--            android:id="@+id/load_grid_"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="@dimen/cardview_height"-->
+        <!--            app:cardBackgroundColor="@color/colorPrimary"-->
+        <!--            android:padding="@dimen/default_padding"-->
+        <!--            android:onClick="startGrid"-->
+        <!--            android:layout_marginTop="@dimen/default_padding"-->
+        <!--            app:cardCornerRadius="@dimen/card_corner_radius">-->
+        <!--            <TextView-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:text="@string/tv_grid_"-->
+        <!--                android:textColor="@color/white"-->
+        <!--                android:layout_gravity="center"-->
+        <!--                android:fontFamily="monospace"-->
+        <!--                />-->
+        <!--        </androidx.cardview.widget.CardView>-->
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/load_clickable_"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_height"
+            app:cardBackgroundColor="@color/colorPrimary"
+            android:padding="@dimen/default_padding"
+            android:onClick="startAlertDialog"
+            android:layout_marginTop="@dimen/default_padding"
+            app:cardCornerRadius="@dimen/card_corner_radius">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_clickable_component"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:fontFamily="monospace" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/load_drawer_"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_height"
+            app:cardBackgroundColor="@color/colorPrimary"
+            android:padding="@dimen/default_padding"
+            android:onClick="startDrawer"
+            android:layout_marginTop="@dimen/default_padding"
+            app:cardCornerRadius="@dimen/card_corner_radius">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_drawer_component"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:fontFamily="monospace" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/load_button_"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_height"
+            app:cardBackgroundColor="@color/colorPrimary"
+            android:padding="@dimen/default_padding"
+            android:onClick="startButtons"
+            android:layout_marginTop="@dimen/default_padding"
+            app:cardCornerRadius="@dimen/card_corner_radius">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_buttons_component"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:fontFamily="monospace" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/load_state_"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_height"
+            app:cardBackgroundColor="@color/colorPrimary"
+            android:padding="@dimen/default_padding"
+            android:onClick="startState"
+            android:layout_marginTop="@dimen/default_padding"
+            app:cardCornerRadius="@dimen/card_corner_radius">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_state_component"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:fontFamily="monospace" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/load_custom_view_"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_height"
+            app:cardBackgroundColor="@color/colorPrimary"
+            android:padding="@dimen/default_padding"
+            android:onClick="startCustomView"
+            android:layout_marginTop="@dimen/default_padding"
+            app:cardCornerRadius="@dimen/card_corner_radius">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_custom_view"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:fontFamily="monospace" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/load_custom_view_paint_"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_height"
+            app:cardBackgroundColor="@color/colorPrimary"
+            android:padding="@dimen/default_padding"
+            android:onClick="startCustomViewPaint"
+            android:layout_marginTop="@dimen/default_padding"
+            app:cardCornerRadius="@dimen/card_corner_radius">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_custom_view_paint"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:fontFamily="monospace" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/load_measuring_scale_"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_height"
+            app:cardBackgroundColor="@color/colorPrimary"
+            android:padding="@dimen/default_padding"
+            android:onClick="startMeasuringScale"
+            android:layout_marginTop="@dimen/default_padding"
+            app:cardCornerRadius="@dimen/card_corner_radius">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_measuring_scale"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:fontFamily="monospace" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/load_autofill_text_"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_height"
+            app:cardBackgroundColor="@color/colorPrimary"
+            android:padding="@dimen/default_padding"
+            android:onClick="startAutofillText"
+            android:layout_marginTop="@dimen/default_padding"
+            app:cardCornerRadius="@dimen/card_corner_radius">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_text_input"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:fontFamily="monospace" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/load_stack_"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_height"
+            app:cardBackgroundColor="@color/colorPrimary"
+            android:padding="@dimen/default_padding"
+            android:onClick="startStack"
+            android:layout_marginTop="@dimen/default_padding"
+            app:cardCornerRadius="@dimen/card_corner_radius">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_stack"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:fontFamily="monospace" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/load_text_align_"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_height"
+            app:cardBackgroundColor="@color/colorPrimary"
+            android:padding="@dimen/default_padding"
+            android:onClick="startViewAlign"
+            android:layout_marginTop="@dimen/default_padding"
+            app:cardCornerRadius="@dimen/card_corner_radius">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_view_layout_arrangement"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:fontFamily="monospace" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/load_material_design_"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_height"
+            app:cardBackgroundColor="@color/colorPrimary"
+            android:padding="@dimen/default_padding"
+            android:onClick="startMaterialDesign"
+            android:layout_marginTop="@dimen/default_padding"
+            app:cardCornerRadius="@dimen/card_corner_radius">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_material_design"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:fontFamily="monospace" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/load_bottom_app_bar_"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_height"
+            app:cardBackgroundColor="@color/colorPrimary"
+            android:padding="@dimen/default_padding"
+            android:onClick="startFixedActionButton"
+            android:layout_marginTop="@dimen/default_padding"
+            app:cardCornerRadius="@dimen/card_corner_radius">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_fab"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:fontFamily="monospace" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/load_constraint_layout_"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_height"
+            app:cardBackgroundColor="@color/colorPrimary"
+            android:padding="@dimen/default_padding"
+            android:onClick="startConstraintLayout"
+            android:layout_marginTop="@dimen/default_padding"
+            app:cardCornerRadius="@dimen/card_corner_radius">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_constraint_layout"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:fontFamily="monospace" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/load_bottom_navigation_"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_height"
+            app:cardBackgroundColor="@color/colorPrimary"
+            android:padding="@dimen/default_padding"
+            android:onClick="startBottomNavigation"
+            android:layout_marginTop="@dimen/default_padding"
+            app:cardCornerRadius="@dimen/card_corner_radius">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_bottom_navigation"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:fontFamily="monospace" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/load_animation1_"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_height"
+            app:cardBackgroundColor="@color/colorPrimary"
+            android:padding="@dimen/default_padding"
+            android:onClick="startAnimation1"
+            android:layout_marginTop="@dimen/default_padding"
+            app:cardCornerRadius="@dimen/card_corner_radius">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_animation1"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:fontFamily="monospace" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/load_animation2_"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_height"
+            app:cardBackgroundColor="@color/colorPrimary"
+            android:padding="@dimen/default_padding"
+            android:onClick="startAnimation2"
+            android:layout_marginTop="@dimen/default_padding"
+            app:cardCornerRadius="@dimen/card_corner_radius">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_animation2"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:fontFamily="monospace" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/load_animation3_"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_height"
+            app:cardBackgroundColor="@color/colorPrimary"
+            android:padding="@dimen/default_padding"
+            android:onClick="startTextInlineContent"
+            android:layout_marginTop="@dimen/default_padding"
+            app:cardCornerRadius="@dimen/card_corner_radius">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_text_inline_content"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:fontFamily="monospace" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/load_list_animation_"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_height"
+            app:cardBackgroundColor="@color/colorPrimary"
+            android:padding="@dimen/default_padding"
+            android:onClick="startListAnimation"
+            android:layout_marginTop="@dimen/default_padding"
+            app:cardCornerRadius="@dimen/card_corner_radius">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_list_animation"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:fontFamily="monospace" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/load_theme_"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_height"
+            app:cardBackgroundColor="@color/colorPrimary"
+            android:padding="@dimen/default_padding"
+            android:onClick="startTheme"
+            android:layout_marginTop="@dimen/default_padding"
+            app:cardCornerRadius="@dimen/card_corner_radius">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_theme"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:fontFamily="monospace" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/load_layout_modifier_"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_height"
+            app:cardBackgroundColor="@color/colorPrimary"
+            android:padding="@dimen/default_padding"
+            android:onClick="startLayoutModifier"
+            android:layout_marginTop="@dimen/default_padding"
+            app:cardCornerRadius="@dimen/card_corner_radius">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_layout_modifier"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:fontFamily="monospace" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/load_process_death_"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_height"
+            app:cardBackgroundColor="@color/colorPrimary"
+            android:padding="@dimen/default_padding"
+            android:onClick="startProcessDeath"
+            android:layout_marginTop="@dimen/default_padding"
+            app:cardCornerRadius="@dimen/card_corner_radius">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_process_death"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:fontFamily="monospace" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/load_live_data_"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_height"
+            app:cardBackgroundColor="@color/colorPrimary"
+            android:padding="@dimen/default_padding"
+            android:onClick="startLiveData"
+            android:layout_marginTop="@dimen/default_padding"
+            app:cardCornerRadius="@dimen/card_corner_radius">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_live_data"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:fontFamily="monospace" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/load_filter_chips_"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_height"
+            app:cardBackgroundColor="@color/colorPrimary"
+            android:padding="@dimen/default_padding"
+            android:onClick="startFlowRow"
+            android:layout_marginTop="@dimen/default_padding"
+            app:cardCornerRadius="@dimen/card_corner_radius">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_filter_chips"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:fontFamily="monospace" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/load_shadow_"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_height"
+            app:cardBackgroundColor="@color/colorPrimary"
+            android:padding="@dimen/default_padding"
+            android:onClick="startShadow"
+            android:layout_marginTop="@dimen/default_padding"
+            app:cardCornerRadius="@dimen/card_corner_radius">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_shadow"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:fontFamily="monospace" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/load_coroutine_flow_"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_height"
+            app:cardBackgroundColor="@color/colorPrimary"
+            android:padding="@dimen/default_padding"
+            android:onClick="startCoroutineFlow"
+            android:layout_marginTop="@dimen/default_padding"
+            app:cardCornerRadius="@dimen/card_corner_radius">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_coroutine_flow"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:fontFamily="monospace" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/load_compose_classic_android_"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_height"
+            app:cardBackgroundColor="@color/colorPrimary"
+            android:padding="@dimen/default_padding"
+            android:onClick="startComposeWithClassicAndroid"
+            android:layout_marginTop="@dimen/default_padding"
+            app:cardCornerRadius="@dimen/card_corner_radius">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_compose_classic"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:fontFamily="monospace" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/load_back_press_"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_height"
+            app:cardBackgroundColor="@color/colorPrimary"
+            android:padding="@dimen/default_padding"
+            android:onClick="startBackPress"
+            android:layout_marginTop="@dimen/default_padding"
+            app:cardCornerRadius="@dimen/card_corner_radius">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_back_press"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:fontFamily="monospace" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/load_zoomable_"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_height"
+            app:cardBackgroundColor="@color/colorPrimary"
+            android:padding="@dimen/default_padding"
+            android:onClick="startZoomable"
+            android:layout_marginTop="@dimen/default_padding"
+            app:cardCornerRadius="@dimen/card_corner_radius">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_zoomable"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:fontFamily="monospace" />
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</ScrollView>
